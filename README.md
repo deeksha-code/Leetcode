@@ -1,3 +1,3 @@
 # Leetcode 
 
-coding solutions implemented in javascript
+Coding solutions implemented in javascript
