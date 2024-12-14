@@ -12,7 +12,7 @@ Constraints:
 1 <= prices.length <= 10^5
 0 <= prices[i] <= 10^4
 
-Solution:
+Solution1:
 
 // let prices = [7, 1, 5, 3, 6, 4];
 let prices=[7, 6, 4, 3, 1]
@@ -29,5 +29,18 @@ for(let i=0;i<prices.length;i++){
     }
 }
 console.log("Final profit is",finalProfit)
+
+Solution2:
+let minPrice = Infinity; // To track the minimum price so far
+let maxProfit = 0; // To track the maximum profit
+
+for (let price of prices) {
+    if (price < minPrice) {
+        minPrice = price; // Update the minimum price
+    } else if (price - minPrice > maxProfit) {
+        maxProfit = price - minPrice; // Update the maximum profit
+    }
+}
+
 
 
