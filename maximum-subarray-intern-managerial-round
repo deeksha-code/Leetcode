@@ -24,7 +24,7 @@ Solution:
 const nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
 
 
-let maxSum = 0; // Overall largest sum
+let maxSum = nums[0]; // Overall largest sum
 for (let i = 0; i < nums.length; i++) {
     let currentSum = nums[i]; // Current subarray sum
     let localMaxSum = nums[i]; // Largest sum of the subarray ending at this position
