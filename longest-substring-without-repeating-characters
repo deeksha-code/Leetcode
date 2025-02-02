@@ -52,3 +52,35 @@ var lengthOfLongestSubstring = function(s) {
     return stringLength;
 
 };
+
+
+code 2:
+
+const a = "abcabcbb";
+console.log(a.length);
+let finalString = "";
+
+for (let i = 0; i < a.length; i++) {
+    let currentString = a[i];
+    let iterationString = ""; 
+
+    for (let j = i + 1; j < a.length; j++) {
+        let c = j;
+
+        if (a[i] != a[j]  && !(iterationString.includes(a[j]))) {
+            currentString += a[j];
+            iterationString += a[j];
+        } else {
+            break;
+        }
+        console.log("iterationString", iterationString);
+    }
+    console.log("currentString", currentString);
+
+    if (finalString.length < currentString.length) {  // Fix: Compare length instead of string
+        finalString = currentString;
+    }
+}
+console.log("finalString", finalString);
+console.log("Length of longest substring:", finalString.length);
+
