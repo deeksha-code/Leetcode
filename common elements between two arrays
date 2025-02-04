@@ -1,0 +1,17 @@
+//JavaScript program to find the common elements between two arrays
+function findCommonElements(arr1, arr2) {
+    // Create a set from the first array for faster lookup
+    const set1 = new Set(arr1);
+
+    // Filter the second array, keeping only elements that are present in the set
+    const commonElements = arr2.filter(item => set1.has(item));
+
+    return commonElements;
+}
+
+// Example usage
+const array1 = [1, 2, 3, 4, 5];
+const array2 = [3, 4, 5, 6, 7];
+
+const result = findCommonElements(array1, array2);
+console.log(result);  // Output: [3, 4, 5]
